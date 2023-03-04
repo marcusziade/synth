@@ -2,9 +2,12 @@ import SwiftUI
 
 @main
 struct synthApp: App {
+    
+    @StateObject var chatViewModel = ChatViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChatView(model: chatViewModel)
         }
     }
 }
